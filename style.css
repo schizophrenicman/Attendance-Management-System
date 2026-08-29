@@ -1,0 +1,160 @@
+:root {
+  --ink: #16213a;
+  --ink-deep: #0f1729;
+  --paper: #f3f4ef;
+  --card: #ffffff;
+  --line: #e4e1d6;
+  --present: #2f6b4f;
+  --late: #c98a2b;
+  --absent: #b5432b;
+  --muted: #5b6472;
+  --ink-2: #1d2430;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink-2);
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 24px;
+}
+
+.container {
+  width: 100%;
+  max-width: 768px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  font-size: 24px;
+  letter-spacing: -0.02em;
+}
+
+.logo-box {
+  width: 36px;
+  height: 36px;
+  border: 2px solid var(--late);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--late);
+  font-size: 14px;
+  font-weight: 600;
+  transform: rotate(-3deg);
+}
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--ink);
+  margin-bottom: 12px;
+  letter-spacing: -0.025em;
+}
+
+.description {
+  max-width: 500px;
+  margin: 0 auto 48px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.card {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px;
+  text-decoration: none;
+  color: var(--ink-2);
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--ink);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(15, 23, 41, 0.06);
+}
+
+.card h2 {
+  font-size: 21px;
+  font-weight: 600;
+  margin: 12px 0 4px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.stamp {
+  display: inline-block;
+  padding: 5px 9px;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stamp-neutral {
+  color: var(--muted);
+  background: #f3f4ef;
+}
+
+.stamp-present {
+  color: var(--present);
+  background: #eef5f0;
+}
+.stamp-late {
+  color: var(--late);
+  background: #fbf4e7;
+}
+.stamp-absent {
+  color: var(--absent);
+  background: #faeeeb;
+}
+.card:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+@media (max-width: 640px) {
+  body {
+    padding: 40px 20px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .logo {
+    margin-bottom: 32px;
+  }
+}
