@@ -1,0 +1,317 @@
+:root {
+  --ink: #16213a;
+  --inkdeep: #0f1729;
+  --paper: #f3f4ef;
+  --card: #ffffff;
+  --line: #e4e1d6;
+  --present: #2f6b4f;
+  --presentlight: #e4efe8;
+  --late: #c98a2b;
+  --latelight: #f7ecda;
+  --absent: #b5432b;
+  --absentlight: #f6e5df;
+  --muted: #5b6472;
+  --ink2: #1d2430;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink2);
+  font-family: "Inter", sans-serif;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.ink-panel {
+  position: relative;
+  background: var(--ink);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 56px;
+  overflow: hidden;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-box {
+  width: 36px;
+  height: 36px;
+  border: 2px solid var(--late);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--late);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  font-weight: 600;
+  transform: rotate(-3deg);
+}
+
+.brand-name {
+  font-family: "Fraunces", serif;
+  font-size: 21px;
+  letter-spacing: -0.02em;
+}
+
+.intro {
+  max-width: 430px;
+}
+
+.today {
+  color: var(--late);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 16px;
+}
+
+.intro h1 {
+  font-family: "Fraunces", serif;
+  font-size: clamp(38px, 4vw, 52px);
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.intro-text {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.panel-footer {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.footer-dot {
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.paper-panel {
+  background: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 40px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-container h2 {
+  font-family: "Fraunces", serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.login-description {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.role-tabs {
+  display: flex;
+  gap: 4px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 4px;
+  margin-bottom: 28px;
+}
+
+.role-tab {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  padding: 9px 8px;
+  border-radius: 6px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.role-tab:hover {
+  color: var(--ink);
+}
+
+.role-tab.active {
+  background: var(--ink);
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  color: var(--ink2);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: var(--ink);
+  box-shadow: 0 0 0 2px rgba(22, 33, 58, 0.08);
+}
+
+.form-group input::placeholder {
+  color: rgba(91, 100, 114, 0.5);
+}
+
+.form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 4px 0 20px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.remember input {
+  accent-color: var(--ink);
+}
+
+.forgot-password {
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.sign-in-button {
+  width: 100%;
+  border: none;
+  background: var(--ink);
+  color: white;
+  padding: 11px;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.sign-in-button:hover {
+  background: var(--inkdeep);
+  transform: translateY(-1px);
+}
+
+.demo-note {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 24px;
+}
+
+@media (max-width: 900px) {
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .ink-panel {
+    min-height: auto;
+    padding: 40px 32px;
+  }
+
+  .intro {
+    padding: 70px 0;
+  }
+
+  .panel-footer {
+    display: none;
+  }
+
+  .paper-panel {
+    padding: 50px 24px;
+  }
+}
+
+@media (max-width: 500px) {
+  .ink-panel {
+    padding: 32px 24px;
+  }
+
+  .intro {
+    padding: 50px 0;
+  }
+
+  .intro h1 {
+    font-size: 38px;
+  }
+
+  .paper-panel {
+    padding: 40px 20px;
+  }
+}
