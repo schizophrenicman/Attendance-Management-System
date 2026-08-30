@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --ink: #16213a;
+  --inkdeep: #0f1729;
+  --paper: #f3f4ef;
+  --card: #ffffff;
+  --line: #e4e1d6;
+  --present: #2f6b4f;
+  --presentlight: #e4efe8;
+  --late: #c98a2b;
+  --latelight: #f7ecda;
+  --absent: #b5432b;
+  --absentlight: #f6e5df;
+  --muted: #5b6472;
+  --ink2: #1d2430;
+}
+body {
+  background: var(--paper);
+  color: var(--ink2);
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
