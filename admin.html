@@ -8,34 +8,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
 
     <link rel="stylesheet" href="admin.css" />
   </head>
 
-  <body>
-    <div id="sidebar-overlay"></div>
+ <body>
+  <div id="sidebar-overlay"></div>
 
-    <div class="layout">
-      <aside id="sidebar" class="sidebar">
-        <div class="sidebar-header">
-          <a href="admin.html" class="logo">
-            <div class="logo-mark">SAS</div>
-            <span>Smart Attendance System</span>
-          </a>
+  <div class="layout">
 
-          <button
-            id="sidebar-close"
-            class="sidebar-close"
-            aria-label="Close menu"
-          >
-            ✕
-          </button>
-        </div>
-      </aside>
+    <aside id="sidebar" class="sidebar">
+
+      <div class="sidebar-header">
+        <a href="admin.html" class="logo">
+          <div class="logo-mark">SAS</div>
+          <span>Smart Attendance System</span>
+        </a>
+
+        <button id="sidebar-close" class="sidebar-close" aria-label="Close menu">✕</button>
+      </div>
+
       <nav class="sidebar-nav">
+
         <p class="nav-heading">Overview</p>
 
         <a href="admin.html" class="nav-link active">
@@ -69,7 +64,24 @@
           <span class="nav-dot"></span>
           Settings
         </a>
+
       </nav>
-    </div>
-  </body>
+
+      <div class="sidebar-footer">
+
+        <div class="admin-profile">
+          <div class="avatar">MR</div>
+
+          <div>
+            <p>.....</p>
+            <span>Head Administrator</span>
+          </div>
+        </div>
+
+        <a href="login.html" class="sign-out">Sign out</a>
+
+      </div>
+    </aside>
+    </body>
+    
 </html>
