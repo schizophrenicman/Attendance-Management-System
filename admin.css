@@ -222,3 +222,55 @@ a {
   background: transparent;
   color: var(--ink2);
 }
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.search-box {
+  position: relative;
+}
+.search-box input {
+  width: 224px;
+  padding: 9px 12px 9px 36px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+.search-box input:focus {
+  border-color: var(--ink);
+}
+.search-box svg {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  color: var(--muted);
+}
+.notification-button {
+  width: 36px;
+  height: 36px;
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink2);
+}
+.notification-button span {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -4px;
+  right: -4px;
+  background: var(--absent);
+  border: 2px solid var(--paper);
+  border-radius: 50%;
+}
+.top-avatar {
+  width: 36px;
+  height: 36px;
+}
