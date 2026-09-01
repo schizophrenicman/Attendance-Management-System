@@ -471,3 +471,50 @@ main {
 .absent-bg {
   background: var(--absent);
 }
+.bar-track {
+  height: 250px;
+  margin-top: 20px;
+  padding: 0 15px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  gap: 20px;
+}
+.bar-col {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.bar-stack {
+  width: 100%;
+  max-width: 58px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+}
+.bar-mon {
+  height: 92%;
+}
+.bar-tue {
+  height: 96%;
+}
+.bar-wed {
+  height: 88%;
+}
+.bar-thu {
+  height: 94%;
+}
+.bar-fri {
+  height: 83%;
+}
+.bar-col > span {
+  color: var(--muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+}
